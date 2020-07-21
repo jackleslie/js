@@ -2,9 +2,11 @@
   "name": "project-name",
   "private": true,
   "version": "0.0.0",
-  "main": "src/index.js",
+  "main": "dist/main.js",
+  "module": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
+    "build": "babel src -o dist/main.js",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage"
@@ -15,6 +17,7 @@
     "url": "https://jackleslie.dev"
   },
   "devDependencies": {
+    "@babel/cli": "^7.10.5",
     "@babel/core": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
     "@commitlint/cli": "^9.1.1",
